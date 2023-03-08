@@ -1,0 +1,219 @@
+// Hero stilization
+.hero {
+  background-image: linear-gradient(
+      180deg,
+      rgba(17, 16, 19, 0.4) 0%,
+      rgba(17, 16, 19, 0.4) 100%
+    ),
+    url("../images/bg/hero-bg.jpg");
+  width: 100%;
+  height: 844px;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: 40% 0%;
+  &__inner {
+    position: relative;
+  }
+  &__subtitle {
+    font-family: var(--page-font);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.3;
+    text-align: center;
+    color: rgba(17, 16, 19, 0.75);
+    margin-bottom: 15px;
+  }
+  &__title {
+    font-family: var(--page-font);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.25;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: var(--black-color);
+  }
+  &__scroll {
+    display: none;
+  }
+  overflow: hidden;
+}
+
+.hero__header {
+  padding: 10px;
+  max-width: 390px;
+  margin-left: auto;
+  margin-right: auto;
+  &__nav {
+    display: none;
+  }
+  &__button {
+    width: 37px;
+    height: 37px;
+    border: 1px solid var(--brand-color);
+    border-radius: 50%;
+    background: transparent;
+    position: relative;
+    top: 30px;
+    left: 30px;
+  }
+}
+
+.circle {
+  width: 253px;
+  height: 253px;
+  background-color: rgba(244, 239, 225, 0.8);
+  border-radius: 50%;
+  position: absolute;
+  &__1 {
+    top: -90px;
+    right: -200px;
+  }
+  &__2 {
+    right: 43px;
+    top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__3 {
+    top: 500px;
+    left: -50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.img {
+  width: 147px;
+  height: 144px;
+  background-image: url("../images/logo/darkLogoDark.png");
+}
+
+@media screen and (min-width: 744px) {
+  .hero {
+    height: 1201px;
+    background-position: 0% 0%;
+    &__subtitle {
+      margin-top: -50px;
+    }
+    &__title {
+      font-size: 48px;
+    }
+  }
+  .hero__header {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    padding-top: 70px;
+    gap: 80px;
+    &__link {
+      color: var(--brand-color);
+    }
+    &__nav {
+      display: flex;
+      align-items: center;
+      gap: 80px;
+    }
+    &__button {
+      position: static;
+    }
+  }
+  .circle {
+    width: 463px;
+    height: 463px;
+    &__1 {
+      top: -300px;
+      right: -350px;
+    }
+    &__2 {
+      right: 64px;
+      top: 150px;
+    }
+    &__3 {
+      left: -250px;
+      top: 600px;
+      justify-content: flex-end;
+      .img {
+        margin-right: 40px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .hero {
+    height: 991px;
+    background-size: cover;
+    background-image: linear-gradient(
+        180deg,
+        rgba(17, 16, 19, 0.4) 0%,
+        rgba(17, 16, 19, 0.4) 100%
+      ),
+      url("../images/bg/hero-bg-big.jpg");
+    &__inner {
+      height: 80%;
+    }
+    &__header {
+      padding: 25px;
+      border-bottom: 1px solid var(--brand-color);
+    }
+    &__scroll {
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-top: 1px solid var(--brand-color);
+      &__link {
+        margin-top: 0px !important;
+      }
+    }
+    &__title {
+      max-width: 495px;
+      color: var(--brand-color);
+    }
+    &__subtitle {
+      color: var(--brand-color);
+      margin-top: -100px;
+    }
+  }
+  .circle {
+    width: 709px;
+    height: 709px;
+    background-color: transparent;
+    border: 1px solid var(--brand-color);
+    &__3 {
+      top: 20px;
+      left: -345px;
+      justify-content: flex-end;
+      align-items: flex-end;
+      .img {
+        margin-bottom: 100px;
+        margin-right: 150px;
+      }
+    }
+    &__2 {
+      top: 20px;
+      right: 362px;
+    }
+    &__1 {
+      top: 20px;
+      right: -348px;
+    }
+  }
+  .img {
+    background-image: url("../images/logo/brightLogoLight.png");
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .hero {
+    background-image: linear-gradient(
+        180deg,
+        rgba(17, 16, 19, 0.4) 0%,
+        rgba(17, 16, 19, 0.4) 100%
+      ),
+      url("../images/bg/hero-bg-very-big.jpg");
+  }
+}
