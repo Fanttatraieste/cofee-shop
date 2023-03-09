@@ -1,5 +1,6 @@
 @import "../scss/hero";
 @import "../scss/vars";
+@import "../scss/about";
 
 * {
   padding: 0px;
@@ -35,14 +36,50 @@ p {
   margin-right: auto;
 }
 
+.btn {
+  font-family: "Raleway";
+  padding: 12px 21px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  background: transparent;
+  border-radius: 25px;
+}
+
+.subtitle {
+  font-size: 11px;
+  line-height: 1.36;
+  text-transform: uppercase;
+  font-family: var(--page-font);
+}
+
+.title {
+  font-family: var(--page-font);
+
+  font-size: 42px;
+  line-height: 1.16;
+  letter-spacing: 0.05em;
+}
+
 @media screen and (min-width: 744px) {
   .container {
     max-width: 744px;
+  }
+  .subtitle {
+    font-size: 15px;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .container {
     max-width: 1440px;
+  }
+  .subtitle {
+    font-size: 20px;
+  }
+  .btn {
+    font-size: 20px;
   }
 }
