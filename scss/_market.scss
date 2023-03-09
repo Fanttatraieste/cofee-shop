@@ -1,0 +1,142 @@
+//Market stilization
+
+.market {
+  background-image: url("../images/bg/market-bg.jpg");
+  padding-bottom: 60px;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 53px;
+  }
+  &__title {
+    margin-top: 30px;
+    border-radius: 16px;
+    background: rgba(23, 19, 19, 0.75);
+    //backdrop-filter: blur(5px);
+    padding: 30px 34px;
+    .subtitle {
+      color: var(--brand-color);
+      &:before {
+        background-color: var(--brand-color);
+      }
+    }
+    .title {
+      color: var(--brand-color);
+      //font-size: 30px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+  &__item {
+    border-radius: 24px;
+    border-top-left-radius: 48px;
+    background: rgba(23, 19, 19, 0.75);
+    width: 220px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__icon {
+    fill: none;
+    stroke: var(--brand-color);
+    stroke-width: 0.1px;
+  }
+  &__btn {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 744px) {
+  .market {
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__inner {
+      align-items: flex-start;
+    }
+    &__list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 60px;
+      position: relative;
+      left: 200px;
+      &__list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 60px;
+      }
+    }
+  }
+  #first,
+  #second,
+  #third,
+  #forth {
+    position: relative;
+  }
+  #first,
+  #second {
+    top: 160px;
+  }
+  #third {
+    bottom: 110px;
+  }
+  #forth {
+    bottom: 380px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .market {
+    margin-bottom: 130px;
+    #first,
+    #second,
+    #third,
+    #forth {
+      position: static;
+    }
+    &__list {
+      left: 300px;
+      &__list {
+        flex-direction: column;
+      }
+    }
+    .position {
+      position: relative;
+      &:first-child {
+        top: 130px;
+      }
+      &:nth-child(2) {
+        bottom: 50px;
+      }
+      &:nth-child(3) {
+        bottom: 130px;
+      }
+      &:last-child {
+        top: 50px;
+      }
+    }
+    &__btn {
+      display: block;
+      background-color: transparent;
+      border: 1px solid var(--brand-color);
+      color: var(--brand-color);
+      &:hover {
+        background-color: var(--brand-color);
+        color: var(--black-color);
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+    }
+  }
+}
