@@ -22,22 +22,7 @@
       transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
   }
-  .subtitle {
-    color: var(--black-color);
-    position: relative;
-    max-width: 100px;
-    left: 80px;
-    &:before {
-      content: "";
-      display: block;
-      width: 60px;
-      height: 1px;
-      background-color: var(--black-color);
-      left: -80px;
-      top: 50%;
-      position: absolute;
-    }
-  }
+
   .title {
     color: var(--black-color);
   }
@@ -52,7 +37,22 @@
     font-size: 18px;
   }
 }
-
+.subtitle {
+  color: var(--black-color);
+  position: relative;
+  max-width: 150px;
+  left: 80px;
+  &:before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 1px;
+    background-color: var(--black-color);
+    left: -80px;
+    top: 50%;
+    position: absolute;
+  }
+}
 @media screen and (min-width: 744px) {
   .about {
     display: flex;
