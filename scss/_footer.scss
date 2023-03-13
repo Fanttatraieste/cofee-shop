@@ -3,6 +3,7 @@
   background-color: #111013;
   padding: 20px;
   overflow: hidden;
+  transition: 300ms;
   &__inner {
     display: flex;
     gap: 20px;
@@ -221,6 +222,7 @@
 
 .is-open {
   background-color: #f4efe1;
+  transition: 300ms;
   .footer__logo {
     color: #111013 !important;
   }
