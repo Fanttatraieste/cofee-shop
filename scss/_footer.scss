@@ -1,0 +1,209 @@
+//Footer stilization
+.footer {
+  background-color: #111013;
+  padding: 20px;
+  overflow: hidden;
+  &__inner {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    position: relative;
+    &--left {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      align-items: flex-start;
+      max-width: calc(50% - 20px);
+    }
+    &--right {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      max-width: calc(50% - 20px);
+    }
+  }
+  // Inner__left--div
+  &__logo {
+    color: #f4efe1;
+    &__icon {
+      fill: currentColor;
+      width: 147px;
+      height: 144px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 80%;
+    &__link {
+      color: rgba(244, 239, 225, 0.75);
+      font-size: 14px;
+      line-height: 1.14;
+      letter-spacing: 0.03em;
+    }
+  }
+  // Inner__right--div
+  &__title {
+    font-size: 24px;
+    line-height: 1.37;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    font-family: var(--page-font);
+    color: #f4efe1;
+  }
+  &__icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+  }
+  &__link {
+    color: #f4efe1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    &:hover {
+      background-color: #f4efe1;
+      color: #111013;
+    }
+  }
+  &__icon__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+  }
+}
+
+@media screen and (min-width: 744px) {
+  .footer {
+    padding: 40px;
+    &__inner {
+      gap: 100px;
+      justify-content: center;
+      &--left {
+        max-width: 237px;
+      }
+    }
+    &__list {
+      max-width: 100%;
+    }
+    &__link {
+      width: 44px;
+      height: 44px;
+    }
+    &__icon__list {
+      gap: 10px;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .footer {
+    padding: 80px;
+    &__inner {
+      padding-left: 200px;
+      justify-content: flex-start;
+      gap: 150px;
+    }
+  }
+}
+
+//btn stilization
+
+.footer__btn {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 70px;
+  height: 35px;
+  padding: 5px 10px;
+  background: transparent;
+  border: 1px solid #f4efe1;
+  border-radius: 16px;
+  outline: none;
+  .btn__circle {
+    width: 22px;
+    height: 22px;
+    background-color: #f4efe1;
+    border-radius: 50%;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    justify-content: flex-end;
+    border: 1px solid #111013;
+    .btn__circle {
+      background-color: #111013;
+    }
+  }
+}
+
+@media screen and (min-width: 744px) {
+  .footer__btn {
+    max-width: 100px;
+    height: 45px;
+    padding: 8px 10px;
+    border-radius: 26px;
+    .btn__circle {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+//Circles stilization
+.footer__circle {
+  background-color: #f4efe1;
+  border-radius: 50%;
+  position: absolute;
+  &1 {
+    width: 98px;
+    height: 98px;
+    bottom: 0px;
+    right: 0px;
+  }
+  &2 {
+    width: 160px;
+    height: 160px;
+    bottom: -100%;
+    right: -100%;
+  }
+  &3 {
+    width: 270px;
+    height: 270px;
+    top: -100%;
+    right: -100%;
+  }
+}
+
+@media screen and (min-width: 744px) {
+  .footer__circle {
+    &1 {
+      bottom: 40px;
+      right: 40px;
+    }
+    &2 {
+      bottom: -100px;
+      right: -100px;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .footer__circle {
+    &1 {
+      top: -70px;
+      right: 350px;
+    }
+    &2 {
+      top: 10px;
+      right: 220px;
+    }
+    &3 {
+      top: 120px;
+      right: 10px;
+    }
+  }
+}
