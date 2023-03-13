@@ -113,7 +113,7 @@
 
 //btn stilization
 
-.footer__btn {
+.footer__btn__open {
   display: flex;
   justify-content: flex-start;
   max-width: 70px;
@@ -129,14 +129,25 @@
     background-color: #f4efe1;
     border-radius: 50%;
   }
-  &:hover,
-  &:focus,
-  &:active {
-    justify-content: flex-end;
-    border: 1px solid #111013;
-    .btn__circle {
-      background-color: #111013;
-    }
+}
+
+.footer__btn__close {
+  display: none;
+  justify-content: flex-end;
+  max-width: 70px;
+  height: 35px;
+  padding: 5px 10px;
+  background: transparent;
+  border: 1px solid #111013;
+  border-radius: 16px;
+  outline: none;
+  position: relative;
+  bottom: 80px;
+  .btn__circle {
+    width: 22px;
+    height: 22px;
+    background-color: #111013;
+    border-radius: 50%;
   }
 }
 
@@ -205,5 +216,31 @@
       top: 120px;
       right: 10px;
     }
+  }
+}
+
+.is-open {
+  background-color: #f4efe1;
+  .footer__logo {
+    color: #111013 !important;
+  }
+  .footer__list__link {
+    color: #111013;
+  }
+  .footer__title {
+    color: #111013;
+  }
+  .footer__link {
+    color: #111013;
+    &:hover {
+      background-color: #111013;
+      color: #f4efe1;
+    }
+  }
+  .footer__circle {
+    background-color: #111013;
+  }
+  .footer__btn__close {
+    display: flex;
   }
 }

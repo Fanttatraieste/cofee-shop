@@ -518,7 +518,16 @@
               </a>
             </li>
           </ul>
-          <button type="button" class="footer__btn">
+          <button
+            type="button"
+            class="footer__btn__open"
+            id="btn"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <div class="btn__circle"></div>
+          </button>
+          <button type="button" class="footer__btn__close" id="btn">
             <div class="btn__circle"></div>
           </button>
         </div>
@@ -527,5 +536,7 @@
         <div class="footer__circle footer__circle3"></div>
       </div>
     </footer>
+    <!---------- Js files ---------->
+    <script src="./js/color.js"></script>
   </body>
 </html>
